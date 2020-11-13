@@ -57,12 +57,12 @@ var handleEnd = function(event) {
   unbindMoveAndEnd();
 };
 var bindMoveAndEnd = function() {
-  $document.on(EVENTNAME_TOUCHMOVE, handleMove);
-  $document.on(EVENTNAME_TOUCHEND, handleEnd);
+  $hitarea.on(EVENTNAME_TOUCHMOVE, handleMove);
+  $hitarea.on(EVENTNAME_TOUCHEND, handleEnd);
 };
 var unbindMoveAndEnd = function() {
-  $document.off(EVENTNAME_TOUCHMOVE, handleMove);
-  $document.off(EVENTNAME_TOUCHEND, handleEnd);
+  $hitarea.off(EVENTNAME_TOUCHMOVE, handleMove);
+  $hitarea.off(EVENTNAME_TOUCHEND, handleEnd);
 };
 
 $hitarea.on(EVENTNAME_TOUCHSTART, handleStart);
